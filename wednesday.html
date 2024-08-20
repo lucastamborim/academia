@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarta-feira</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0E2A3A;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        h1 {
+            color: #ffffff;
+            padding: 20px;
+            margin-bottom: 0;
+        }
+
+        .description {
+            font-size: 16px;
+            color: #FFA25B;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #17384C;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 500px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"], input[type="number"] {
+            width: calc(50% - 22px);
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #f0f0f0;
+            color: #000;
+        }
+
+        button {
+            background-color: #FFA25B;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #FF7A2F;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px auto;
+            max-width: 500px;
+        }
+
+        li {
+            background-color: #17384C;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #ffffff;
+        }
+
+        li button {
+            background-color: #dc3545;
+            border: none;
+            padding: 5px 10px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 3px;
+            color: #ffffff;
+        }
+
+        li button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercícios de Quarta-feira</h1>
+    <div class="description">Pernas Completo</div>
+    
+    <form id="taskForm">
+        <input type="text" id="taskInput" placeholder="Novo exercício" required>
+        <input type="number" id="taskWeight" placeholder="Peso" required>
+        <button type="submit">Adicionar Exercício</button>
+    </form>
+    
+    <ul id="taskList"></ul>
+    
+    <button onclick="location.href='index.html'">Voltar</button>
+    
+    <script src="script.js"></script>
+</body>
+</html>

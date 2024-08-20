@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0E2A3A;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            position: relative;
+            color: #ffffff;
+        }
+
+        h1 {
+            color: #ffffff;
+            margin-top: 60px;
+        }
+
+        button {
+            background-color: #FFA25B;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            display: block;
+            width: 200px;
+            margin: 10px auto;
+            text-align: left;
+        }
+
+        button:hover {
+            background-color: #FF7A2F;
+        }
+
+        .description {
+            display: block;
+            font-size: 12px;
+            color: #f0f0f0;
+            margin-top: 5px;
+        }
+
+        .Wellcome {
+            color: #fd9c64;
+           
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="Wellcome">Bem vindo, Lucas!</h1>
+    <h1 id="dayMessage">Hoje é Segunda-feira</h1>
+
+    <button onclick="location.href='monday.html'">
+        Segunda-feira
+        <span class="description">Peito e tríceps</span>
+    </button>
+
+    <button onclick="location.href='tuesday.html'">
+        Terça-feira
+        <span class="description">Costas e bíceps</span>
+    </button>
+
+    <button onclick="location.href='wednesday.html'">
+        Quarta-feira
+        <span class="description">Pernas completo</span>
+    </button>
+
+    <button onclick="location.href='thursday.html'">
+        Quinta-feira
+        <span class="description">Ombros e peito</span>
+    </button>
+
+    <button onclick="location.href='friday.html'">
+        Sexta-feira
+        <span class="description">Braços completos</span>
+    </button>
+
+    
+
+    <script>
+        function getDayName(dayIndex) {
+            const days = [
+                'Domingo', 'Segunda-feira', 'Terça-feira',
+                'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'
+            ];
+            return days[dayIndex];
+        }
+
+        function updateDayMessage() {
+            const today = new Date();
+            const dayIndex = today.getDay();
+            const dayName = getDayName(dayIndex);
+            document.getElementById('dayMessage').textContent = `Hoje é ${dayName}`;
+        }
+
+        updateDayMessage();
+    </script>
+</body>
+
+</html>
